@@ -1,3 +1,11 @@
+const button = document.querySelector('button');
+const form = document.querySelector('.form');
+const addBtn = document.querySelector('#add-btn');
+
+button.addEventListener('click', function () {
+  form.classList.toggle('invisible');
+});
+
 let myLibrary = [];
 
 function Book(title, author, nPages, read) {
