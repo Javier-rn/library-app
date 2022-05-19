@@ -70,7 +70,23 @@ function createCards(booksArr) {
     const readP = document.createElement('p');
     readP.setAttribute('id', 'read-status');
 
-    book.read === true ? (readP.textContent = 'Read') : (readP.textContent = 'Not read');
+    book.read == 'true' ? (readP.textContent = 'Read') : (readP.textContent = 'Not read');
+
+    readP.addEventListener('click', function (e) {
+      if (e.target.textContent === 'Not read') {
+        e.target.textContent = 'Read';
+      } else if (e.target.textContent === 'Read') {
+        e.target.textContent = 'Not read';
+      }
+    });
+
+    const deleteIcon = document.createElement('span');
+    deleteIcon.classList.add('material-symbols-outlined');
+    deleteIcon.textContent = 'close';
+
+    deleteIcon.addEventListener('click', function (e) {
+      e.target.parentElement.remove();
+    });
 
     cardTop.appendChild(titleP);
     cardTop.appendChild(authorP);
@@ -78,6 +94,7 @@ function createCards(booksArr) {
     cardBottom.appendChild(pagesP);
     cardBottom.appendChild(readP);
 
+    card.appendChild(deleteIcon);
     card.appendChild(cardTop);
     card.appendChild(cardBottom);
 
