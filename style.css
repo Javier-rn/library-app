@@ -48,6 +48,10 @@ body {
   right: 180px;
 }
 
+.form div {
+  display: inline;
+}
+
 .invisible {
   display: none;
 }
