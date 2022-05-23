@@ -29,6 +29,23 @@ body {
   padding: 4px 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+input {
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em 0.6em;
+  background-color: ;
+}
+
+#read-status {
+  margin-right: 5px;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form button {

@@ -23,10 +23,6 @@ function Book(title, author, nPages, read) {
 
 // const book1 = new Book('Game of Thrones', 'George RR Martin', 800, true);
 
-function addBookToLibrary(book) {
-  // WORKING
-}
-
 addBtn.addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -41,6 +37,10 @@ addBtn.addEventListener('click', function (e) {
   myLibrary.push(newBook);
 
   createCards(myLibrary);
+
+  titleInput.value = '';
+  authorInput.value = '';
+  pagesInput.value = '';
 });
 
 function createCards(booksArr) {
