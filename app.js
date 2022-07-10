@@ -14,14 +14,14 @@ button.addEventListener('click', function () {
 
 let myLibrary = [];
 
-function Book(title, author, nPages, read) {
-  this.title = title;
-  this.author = author;
-  this.nPages = nPages;
-  this.read = read;
+class Book {
+  constructor(title, author, nPages, read) {
+    this.title = title;
+    this.author = author;
+    this.nPages = nPages;
+    this.read = read;
+  }
 }
-
-// const book1 = new Book('Game of Thrones', 'George RR Martin', 800, true);
 
 addBtn.addEventListener('click', function (e) {
   e.preventDefault();
@@ -100,17 +100,4 @@ function createCards(booksArr) {
 
     container.appendChild(card);
   });
-}
-
-{
-  /*   <div class="card">
-        <div class="card-top">
-          <p id="title">Game of Thrones</p>
-          <p id="author">George RR Martin</p>
-        </div>
-        <div class="card-bottom">
-          <p>800 pages</p>
-          <p>Read</p>
-        </div>
-      </div> */
 }
